@@ -16,8 +16,6 @@ class Dyhotomia_class {
         ~Dyhotomia_class();
         void setVolumes(double vol_a, double vol_b);
         void setTolerance(double vol_eps);
-        double f(double x);
-        double derivative(double x, double delta_x);
         double dyhotomiaMethod();
         double newtonMethod();
 };

@@ -9,13 +9,13 @@ void Dyhotomia_class::setTolerance(double vol_eps) {
     eps = vol_eps;
 }
 
-double Dyhotomia_class::f(double x) {
+auto f = [](double x) {
     return x - 2 + sin(1 / x);
-}
+};
 
-double Dyhotomia_class::derivative(double x, double delta_x = 1e-6) {
+auto derivative = [](double x, double delta_x = 1e-6) {
     return (f(x + delta_x) - f(x)) / delta_x;
-}
+};
 
 double Dyhotomia_class::dyhotomiaMethod() {
     while (!(f(a) * f(b) > 0)) {
